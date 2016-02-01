@@ -100,6 +100,42 @@
             </objects>
             <point key="canvasLocation" x="1776" y="297"/>
         </scene>
+        <!--Bar Details View Controller-->
+        <scene sceneID="kPM-1m-Tbj">
+            <objects>
+                <viewController storyboardIdentifier="detailsScene" id="swd-Ad-n0B" customClass="BarDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FSK-Na-vRc"/>
+                        <viewControllerLayoutGuide type="bottom" id="udi-B1-ucJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6eL-az-oXM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgq-Cn-hui">
+                                <rect key="frame" x="50" y="117" width="121" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XF4-OC-HWm">
+                                <rect key="frame" x="50" y="72" width="61" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="lgq-Cn-hui" id="DOr-eQ-yy8"/>
+                        <outlet property="nameLabel" destination="XF4-OC-HWm" id="P69-Ke-n1c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTk-3Q-lll" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2485" y="297"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kiG-Yh-xvL">
             <objects>

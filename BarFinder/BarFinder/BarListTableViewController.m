@@ -7,6 +7,7 @@
 //
 
 #import "BarListTableViewController.h"
+#import "BarDetailsViewController.h"
 
 @interface BarListTableViewController ()
 
@@ -66,6 +67,17 @@
     return cell;
 }
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Bar* selectedBar = [self.bars objectAtIndex:indexPath.row];
+    
+    NSString* storyboardId = @"detailsScene";
+    
+    BarDetailsViewController* barsViewController = [self.storyboard instantiateViewControllerWithIdentifier:storyboardId];
+    barsViewController.bar = selectedBar;
+    
+    [self.navigationController pushViewController:barsViewController animated:YES];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

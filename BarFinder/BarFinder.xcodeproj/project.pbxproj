@@ -15,6 +15,7 @@
 		E250BA491C5F863C00BFBB66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E250BA471C5F863C00BFBB66 /* LaunchScreen.storyboard */; };
 		E250BA541C5FCE4400BFBB66 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA531C5FCE4400BFBB66 /* Bar.m */; };
 		E250BA5A1C5FFF5D00BFBB66 /* BarListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */; };
+		E250BA5D1C60050100BFBB66 /* BarDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		E250BA531C5FCE4400BFBB66 /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar.m; path = BarFinder/Bar.m; sourceTree = "<group>"; };
 		E250BA581C5FFF5C00BFBB66 /* BarListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarListTableViewController.h; path = BarFinder/BarListTableViewController.h; sourceTree = "<group>"; };
 		E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarListTableViewController.m; path = BarFinder/BarListTableViewController.m; sourceTree = "<group>"; };
+		E250BA5B1C60050100BFBB66 /* BarDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarDetailsViewController.h; path = BarFinder/BarDetailsViewController.h; sourceTree = "<group>"; };
+		E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarDetailsViewController.m; path = BarFinder/BarDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 			children = (
 				E250BA3F1C5F863C00BFBB66 /* MainViewController.h */,
 				E250BA401C5F863C00BFBB66 /* MainViewController.m */,
+				E250BA5B1C60050100BFBB66 /* BarDetailsViewController.h */,
+				E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */,
 				E250BA581C5FFF5C00BFBB66 /* BarListTableViewController.h */,
 				E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */,
 			);
@@ -178,6 +183,7 @@
 				E250BA411C5F863C00BFBB66 /* MainViewController.m in Sources */,
 				E250BA541C5FCE4400BFBB66 /* Bar.m in Sources */,
 				E250BA3E1C5F863C00BFBB66 /* AppDelegate.m in Sources */,
+				E250BA5D1C60050100BFBB66 /* BarDetailsViewController.m in Sources */,
 				E250BA3B1C5F863C00BFBB66 /* main.m in Sources */,
 				E250BA5A1C5FFF5D00BFBB66 /* BarListTableViewController.m in Sources */,
 			);
