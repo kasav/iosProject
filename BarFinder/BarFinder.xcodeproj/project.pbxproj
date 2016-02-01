@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		E250BA3B1C5F863C00BFBB66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA3A1C5F863C00BFBB66 /* main.m */; };
 		E250BA3E1C5F863C00BFBB66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA3D1C5F863C00BFBB66 /* AppDelegate.m */; };
-		E250BA411C5F863C00BFBB66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA401C5F863C00BFBB66 /* ViewController.m */; };
+		E250BA411C5F863C00BFBB66 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA401C5F863C00BFBB66 /* MainViewController.m */; };
 		E250BA441C5F863C00BFBB66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E250BA421C5F863C00BFBB66 /* Main.storyboard */; };
 		E250BA461C5F863C00BFBB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E250BA451C5F863C00BFBB66 /* Assets.xcassets */; };
 		E250BA491C5F863C00BFBB66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E250BA471C5F863C00BFBB66 /* LaunchScreen.storyboard */; };
+		E250BA541C5FCE4400BFBB66 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA531C5FCE4400BFBB66 /* Bar.m */; };
+		E250BA5A1C5FFF5D00BFBB66 /* BarListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,16 @@
 		E250BA3A1C5F863C00BFBB66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E250BA3C1C5F863C00BFBB66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E250BA3D1C5F863C00BFBB66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E250BA3F1C5F863C00BFBB66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E250BA401C5F863C00BFBB66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E250BA3F1C5F863C00BFBB66 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = BarFinder/MainViewController.h; sourceTree = "<group>"; };
+		E250BA401C5F863C00BFBB66 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = BarFinder/MainViewController.m; sourceTree = "<group>"; };
 		E250BA431C5F863C00BFBB66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E250BA451C5F863C00BFBB66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E250BA481C5F863C00BFBB66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E250BA4A1C5F863C00BFBB66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E250BA521C5FCE4400BFBB66 /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar.h; path = BarFinder/Bar.h; sourceTree = "<group>"; };
+		E250BA531C5FCE4400BFBB66 /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar.m; path = BarFinder/Bar.m; sourceTree = "<group>"; };
+		E250BA581C5FFF5C00BFBB66 /* BarListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarListTableViewController.h; path = BarFinder/BarListTableViewController.h; sourceTree = "<group>"; };
+		E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarListTableViewController.m; path = BarFinder/BarListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,8 @@
 		E250BA2D1C5F863C00BFBB66 = {
 			isa = PBXGroup;
 			children = (
+				E250BA511C5FCDEC00BFBB66 /* Controllers */,
+				E250BA501C5FCD2300BFBB66 /* Models */,
 				E250BA381C5F863C00BFBB66 /* BarFinder */,
 				E250BA371C5F863C00BFBB66 /* Products */,
 			);
@@ -60,8 +68,6 @@
 			children = (
 				E250BA3C1C5F863C00BFBB66 /* AppDelegate.h */,
 				E250BA3D1C5F863C00BFBB66 /* AppDelegate.m */,
-				E250BA3F1C5F863C00BFBB66 /* ViewController.h */,
-				E250BA401C5F863C00BFBB66 /* ViewController.m */,
 				E250BA421C5F863C00BFBB66 /* Main.storyboard */,
 				E250BA451C5F863C00BFBB66 /* Assets.xcassets */,
 				E250BA471C5F863C00BFBB66 /* LaunchScreen.storyboard */,
@@ -77,6 +83,26 @@
 				E250BA3A1C5F863C00BFBB66 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E250BA501C5FCD2300BFBB66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E250BA521C5FCE4400BFBB66 /* Bar.h */,
+				E250BA531C5FCE4400BFBB66 /* Bar.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E250BA511C5FCDEC00BFBB66 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E250BA3F1C5F863C00BFBB66 /* MainViewController.h */,
+				E250BA401C5F863C00BFBB66 /* MainViewController.m */,
+				E250BA581C5FFF5C00BFBB66 /* BarListTableViewController.h */,
+				E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E250BA411C5F863C00BFBB66 /* ViewController.m in Sources */,
+				E250BA411C5F863C00BFBB66 /* MainViewController.m in Sources */,
+				E250BA541C5FCE4400BFBB66 /* Bar.m in Sources */,
 				E250BA3E1C5F863C00BFBB66 /* AppDelegate.m in Sources */,
 				E250BA3B1C5F863C00BFBB66 /* main.m in Sources */,
+				E250BA5A1C5FFF5D00BFBB66 /* BarListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +326,7 @@
 				E250BA4F1C5F863C00BFBB66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
