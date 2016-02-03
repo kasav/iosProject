@@ -10,8 +10,9 @@
 
 @interface ReservationViewController ()
 
+@property (strong, nonatomic) NSDate* date;
 @property (strong, nonatomic) NSString* dateAsString;
-@property int peopleCount;
+@property NSInteger peopleCount;
 
 @end
 
@@ -39,11 +40,11 @@
 */
 
 - (IBAction)datePickedButton:(id)sender {
-    NSDate* selectedDate = [self.datePicker date];
+    self.date = [self.datePicker date];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"HH:mm-dd/MM/yyyy"];
-    self.dateAsString = [formatter stringFromDate:selectedDate];
+    self.dateAsString = [formatter stringFromDate:self.date];
     
     NSString* dateStamp = [[NSString alloc] initWithFormat:@"Избрана дата: %@", self.dateAsString];
     self.showDateLabel.text = dateStamp;
@@ -53,10 +54,12 @@
     
     self.peopleCount = [self.reservePeopleInput.text intValue];
     
-    if (self.peopleCount) {
+    
+    
+    if ([self reservationInputIsValid:self.date andCount:self.peopleCount]) {
         UIAlertController * alert= [UIAlertController
                                     alertControllerWithTitle:@"Резервация"
-                                    message:[NSString stringWithFormat: @"Резервирате маса %i души в %@ за %@?",self.peopleCount, self.reserveBar.name, self.dateAsString]
+                                    message:[NSString stringWithFormat: @"Резервирате маса %li души в %@ за %@?",(long)self.peopleCount, self.reserveBar.name, self.dateAsString]
                                     preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* yesButton = [UIAlertAction
@@ -64,7 +67,7 @@
                                     style:UIAlertActionStyleDefault
                                     handler:^(UIAlertAction * action)
                                     {
-                                        //Handel your yes please button action here
+                                        [[Reservation alloc] initWithDate:self.date andPeopleCount:self.peopleCount];
                                         
                                         
                                     }];
@@ -73,7 +76,6 @@
                                    style:UIAlertActionStyleDefault
                                    handler:^(UIAlertAction * action)
                                    {
-                                       //Handel no, thanks button
                                        [self closeAlertview];
                                    }];
         
@@ -81,14 +83,41 @@
         [alert addAction:noButton];
         
         [self presentViewController:alert animated:YES completion:nil];
+        
+    }
+    else {
+        UIAlertController * alert= [UIAlertController
+                                    alertControllerWithTitle:@"Резервация"
+                                    message: @"Невалидни данни за резервация"
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* yesButton = [UIAlertAction
+                                    actionWithTitle:@"OK"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action)
+                                    {
+                                        [self closeAlertview];
+                                    }];
+        [alert addAction:yesButton];
+        [self presentViewController:alert animated:YES completion:nil];
 
     }
     
-    
 }
+                                    
 -(void)closeAlertview
 {
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(BOOL)reservationInputIsValid: (NSDate*)date andCount:(NSInteger)peopleCount {
+    
+    if([date compare: [NSDate date]]== NSOrderedAscending || peopleCount <=0){
+        return NO;
+    }
+    
+    return YES;
+    
 }
 @end

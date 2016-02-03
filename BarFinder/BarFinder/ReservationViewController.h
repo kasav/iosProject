@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Bar.h"
+#import "Reservation.h"
 
 @interface ReservationViewController : UIViewController
 

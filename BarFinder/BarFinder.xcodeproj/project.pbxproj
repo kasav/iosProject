@@ -11,6 +11,7 @@
 		E20A57A11C62281A00D1A094 /* CustomBarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E20A579F1C62281A00D1A094 /* CustomBarTableViewCell.m */; };
 		E20A57A21C62281A00D1A094 /* CustomBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20A57A01C62281A00D1A094 /* CustomBarTableViewCell.xib */; };
 		E20A57A51C62684200D1A094 /* ReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20A57A41C62684200D1A094 /* ReservationViewController.m */; };
+		E20A57A81C62928F00D1A094 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = E20A57A71C62928F00D1A094 /* Reservation.m */; };
 		E250BA3B1C5F863C00BFBB66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA3A1C5F863C00BFBB66 /* main.m */; };
 		E250BA3E1C5F863C00BFBB66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA3D1C5F863C00BFBB66 /* AppDelegate.m */; };
 		E250BA411C5F863C00BFBB66 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA401C5F863C00BFBB66 /* MainViewController.m */; };
@@ -30,6 +31,8 @@
 		E20A57A01C62281A00D1A094 /* CustomBarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomBarTableViewCell.xib; path = BarFinder/CustomBarTableViewCell.xib; sourceTree = "<group>"; };
 		E20A57A31C62684200D1A094 /* ReservationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReservationViewController.h; path = BarFinder/ReservationViewController.h; sourceTree = "<group>"; };
 		E20A57A41C62684200D1A094 /* ReservationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReservationViewController.m; path = BarFinder/ReservationViewController.m; sourceTree = "<group>"; };
+		E20A57A61C62928F00D1A094 /* Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reservation.h; path = BarFinder/Reservation.h; sourceTree = "<group>"; };
+		E20A57A71C62928F00D1A094 /* Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reservation.m; path = BarFinder/Reservation.m; sourceTree = "<group>"; };
 		E250BA361C5F863C00BFBB66 /* BarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E250BA3A1C5F863C00BFBB66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E250BA3C1C5F863C00BFBB66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 			children = (
 				E250BA521C5FCE4400BFBB66 /* Bar.h */,
 				E250BA531C5FCE4400BFBB66 /* Bar.m */,
+				E20A57A61C62928F00D1A094 /* Reservation.h */,
+				E20A57A71C62928F00D1A094 /* Reservation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				E250BA3E1C5F863C00BFBB66 /* AppDelegate.m in Sources */,
 				E20A57A51C62684200D1A094 /* ReservationViewController.m in Sources */,
 				E250BA5D1C60050100BFBB66 /* BarDetailsViewController.m in Sources */,
+				E20A57A81C62928F00D1A094 /* Reservation.m in Sources */,
 				E250BA3B1C5F863C00BFBB66 /* main.m in Sources */,
 				E20A57A11C62281A00D1A094 /* CustomBarTableViewCell.m in Sources */,
 				E250BA5A1C5FFF5D00BFBB66 /* BarListTableViewController.m in Sources */,
