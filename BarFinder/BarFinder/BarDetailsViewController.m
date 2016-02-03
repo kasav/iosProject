@@ -11,7 +11,10 @@
 @interface BarDetailsViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionLabel;
 
 @end
 
@@ -21,6 +24,8 @@
     [super viewDidLoad];
     self.nameLabel.text = self.bar.name;
     self.addressLabel.text = self.bar.address;
+    self.phoneLabel.text = self.bar.phone;
+    self.descriptionLabel.text = self.bar.textDescription;
 }
 
 - (void)didReceiveMemoryWarning {

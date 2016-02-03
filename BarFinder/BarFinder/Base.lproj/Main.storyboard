@@ -135,24 +135,121 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgq-Cn-hui">
-                                <rect key="frame" x="50" y="117" width="121" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m29-qF-1mr">
+                                <rect key="frame" x="20" y="28" width="180" height="172"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Име:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNW-jc-36a">
+                                <rect key="frame" x="218" y="28" width="3176" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XF4-OC-HWm">
-                                <rect key="frame" x="50" y="72" width="61" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFw-A2-zmi">
+                                <rect key="frame" x="218" y="150" width="3175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV7-hi-uat">
+                                <rect key="frame" x="20" y="208" width="87" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="cl8-un-i8A"/>
+                                </constraints>
+                                <state key="normal" title="Позвъни"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoo-8t-qgM">
+                                <rect key="frame" x="109" y="208" width="91" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="cRT-XJ-1z0"/>
+                                </constraints>
+                                <state key="normal" title="Резервирай"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEm-hO-isw">
+                                <rect key="frame" x="219" y="57" width="3176" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="3176" id="DWq-M5-4j4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phoneField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzc-Rt-bd9">
+                                <rect key="frame" x="219" y="179" width="362" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbX-CP-2AN">
+                                <rect key="frame" x="20" y="289" width="301" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="301" id="xyh-4b-Mz1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuM-Ix-GDX">
+                                <rect key="frame" x="20" y="318" width="554" height="262"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="addressField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUt-ij-Hkr">
+                                <rect key="frame" x="219" y="118" width="362" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfQ-vq-F35">
+                                <rect key="frame" x="218" y="89" width="3175" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="3175" id="2O0-er-SKM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PfQ-vq-F35" firstAttribute="trailing" secondItem="fFw-A2-zmi" secondAttribute="trailing" id="0p3-Vo-jMN"/>
+                            <constraint firstItem="m29-qF-1mr" firstAttribute="top" secondItem="FSK-Na-vRc" secondAttribute="bottom" constant="8" symbolic="YES" id="3Bi-YY-0IF"/>
+                            <constraint firstItem="Lzc-Rt-bd9" firstAttribute="trailing" secondItem="OUt-ij-Hkr" secondAttribute="trailing" id="4FS-h0-Vko"/>
+                            <constraint firstItem="FEm-hO-isw" firstAttribute="leading" secondItem="m29-qF-1mr" secondAttribute="trailing" constant="19" id="4em-i6-0Xr"/>
+                            <constraint firstItem="qoo-8t-qgM" firstAttribute="leading" secondItem="gV7-hi-uat" secondAttribute="trailing" constant="2" id="5Lv-St-T7l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OUt-ij-Hkr" secondAttribute="trailing" constant="-1" id="EgJ-2J-dWP"/>
+                            <constraint firstItem="FEm-hO-isw" firstAttribute="top" secondItem="cNW-jc-36a" secondAttribute="bottom" constant="8" symbolic="YES" id="LJ4-h0-5BK"/>
+                            <constraint firstItem="PfQ-vq-F35" firstAttribute="leading" secondItem="fFw-A2-zmi" secondAttribute="leading" id="Q2G-o1-p1y"/>
+                            <constraint firstItem="m29-qF-1mr" firstAttribute="trailing" secondItem="qoo-8t-qgM" secondAttribute="trailing" id="QuU-8u-Lzk"/>
+                            <constraint firstItem="cNW-jc-36a" firstAttribute="leading" secondItem="m29-qF-1mr" secondAttribute="trailing" constant="18" id="RIm-yJ-fPC"/>
+                            <constraint firstItem="OUt-ij-Hkr" firstAttribute="leading" secondItem="FEm-hO-isw" secondAttribute="leading" id="RPC-ie-Gma"/>
+                            <constraint firstAttribute="bottom" secondItem="BuM-Ix-GDX" secondAttribute="bottom" constant="20" symbolic="YES" id="Rco-im-Klg"/>
+                            <constraint firstItem="BuM-Ix-GDX" firstAttribute="leading" secondItem="6eL-az-oXM" secondAttribute="leadingMargin" id="WWt-jU-zY6"/>
+                            <constraint firstItem="m29-qF-1mr" firstAttribute="top" secondItem="cNW-jc-36a" secondAttribute="top" id="X1t-Ft-vBg"/>
+                            <constraint firstItem="gV7-hi-uat" firstAttribute="top" secondItem="m29-qF-1mr" secondAttribute="bottom" constant="8" symbolic="YES" id="ZHe-cb-Ney"/>
+                            <constraint firstItem="cNW-jc-36a" firstAttribute="leading" secondItem="PfQ-vq-F35" secondAttribute="leading" id="cni-eb-HBK"/>
+                            <constraint firstItem="OUt-ij-Hkr" firstAttribute="leading" secondItem="Lzc-Rt-bd9" secondAttribute="leading" id="d39-tq-2mw"/>
+                            <constraint firstItem="cNW-jc-36a" firstAttribute="centerX" secondItem="PfQ-vq-F35" secondAttribute="centerX" id="dRY-0U-cqR"/>
+                            <constraint firstItem="fFw-A2-zmi" firstAttribute="top" secondItem="OUt-ij-Hkr" secondAttribute="bottom" constant="11" id="fOg-Ie-SjP"/>
+                            <constraint firstItem="tbX-CP-2AN" firstAttribute="centerY" secondItem="6eL-az-oXM" secondAttribute="centerY" id="gFz-dF-O0o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BuM-Ix-GDX" secondAttribute="trailing" constant="6" id="hd4-Hc-FPX"/>
+                            <constraint firstItem="Lzc-Rt-bd9" firstAttribute="top" secondItem="fFw-A2-zmi" secondAttribute="bottom" constant="8" symbolic="YES" id="j7x-A2-1EQ"/>
+                            <constraint firstItem="BuM-Ix-GDX" firstAttribute="top" secondItem="tbX-CP-2AN" secondAttribute="bottom" constant="8" symbolic="YES" id="jTV-37-QWE"/>
+                            <constraint firstItem="Lzc-Rt-bd9" firstAttribute="bottom" secondItem="m29-qF-1mr" secondAttribute="bottom" id="kez-2U-HA3"/>
+                            <constraint firstItem="gV7-hi-uat" firstAttribute="baseline" secondItem="qoo-8t-qgM" secondAttribute="baseline" id="lYx-5t-oe5"/>
+                            <constraint firstItem="tbX-CP-2AN" firstAttribute="leading" secondItem="gV7-hi-uat" secondAttribute="leading" id="mI7-PE-r5P"/>
+                            <constraint firstItem="PfQ-vq-F35" firstAttribute="top" secondItem="FEm-hO-isw" secondAttribute="bottom" constant="11" id="p9v-gI-77X"/>
+                            <constraint firstItem="gV7-hi-uat" firstAttribute="leading" secondItem="m29-qF-1mr" secondAttribute="leading" id="pdX-Tl-xpa"/>
+                            <constraint firstItem="OUt-ij-Hkr" firstAttribute="top" secondItem="PfQ-vq-F35" secondAttribute="bottom" constant="8" symbolic="YES" id="uu6-mk-Z1Z"/>
+                            <constraint firstItem="BuM-Ix-GDX" firstAttribute="leading" secondItem="tbX-CP-2AN" secondAttribute="leading" id="xlu-sH-KxQ"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressLabel" destination="lgq-Cn-hui" id="DOr-eQ-yy8"/>
-                        <outlet property="nameLabel" destination="XF4-OC-HWm" id="P69-Ke-n1c"/>
+                        <outlet property="addressLabel" destination="OUt-ij-Hkr" id="g1C-ec-5P8"/>
+                        <outlet property="descriptionLabel" destination="BuM-Ix-GDX" id="zID-3G-7b5"/>
+                        <outlet property="nameLabel" destination="FEm-hO-isw" id="tZC-Zz-tjk"/>
+                        <outlet property="phoneLabel" destination="Lzc-Rt-bd9" id="KCe-Ck-KPe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTk-3Q-lll" userLabel="First Responder" sceneMemberID="firstResponder"/>

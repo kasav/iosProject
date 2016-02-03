@@ -17,7 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    //test
+    self.data = [[LocalData alloc] init];
+    
+    NSMutableArray* bars = [NSMutableArray arrayWithObjects:
+                 [Bar BarWithName:@"Niagara" address:@"ul. Obikolna 15" phone:@"0888151515"textDescription: @"Svqstna picariq" andImageUrl:@"http://photos.mandarinoriental.com/is/image/MandarinOriental/excelsior-restaurant-dickens-bar?$DetailBannerHeight$"],
+                 [Bar BarWithName:@"Nazdrave" address:@"ul. Vasil Lewski 18" phone:@"0888222222"textDescription: @"Qk Bar" andImageUrl:@"http://e-barnyc.com/wp-content/uploads/2014/05/20140423_Es_bar-9571_ENF.tif.jpg"],
+                 [Bar BarWithName:@"Nedelq" address:@"ul. Shipchenski prohod 115" phone:@"0888333333"textDescription: @"Sladkarnica" andImageUrl:@"http://vignette1.wikia.nocookie.net/glee/images/e/eb/Sports_Bar_SNAP_April-16.jpg/revision/latest?cb=20130704082132"],
+                 nil];
+    
+    [bars enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.data addBar:obj];
+    }];
     return YES;
 }
 

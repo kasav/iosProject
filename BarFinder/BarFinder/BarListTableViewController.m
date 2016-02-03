@@ -7,7 +7,7 @@
 //
 
 #import "BarListTableViewController.h"
-#import "BarDetailsViewController.h"
+
 
 @interface BarListTableViewController ()
 
@@ -18,7 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self fillWithSampleBars];
+    AppDelegate* delegate = [UIApplication sharedApplication].delegate;
+    self.bars = [delegate.data bars];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,15 +34,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) fillWithSampleBars {
-    
-    self.bars = [NSMutableArray arrayWithObjects:
-                 [Bar BarWithName:@"Niagara" address:@"ul. Obikolna 15" phone:@"0888151515"textDescription: @"Svqstna picariq" andImageUrl:@"..."],
-                 [Bar BarWithName:@"Nazdrave" address:@"ul. Vasil Lewski 18" phone:@"0888222222"textDescription: @"Qk Bar" andImageUrl:@"..."],
-                 [Bar BarWithName:@"Nedelq" address:@"ul. Shipchenski prohod 115" phone:@"0888333333"textDescription: @"Sladkarnica" andImageUrl:@"..."],
-                 nil];
-    
-}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -56,13 +49,27 @@
     
     NSString* cellIdentifier = @"BarCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
+    CustomBarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: cellIdentifier];
+        NSArray* topCells = [[NSBundle mainBundle] loadNibNamed:@"CustomBarTableViewCell" owner:self options:nil];
+        cell = [topCells objectAtIndex:0];
+        
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: cellIdentifier];
     }
     
-    cell.textLabel.text = [[self.bars objectAtIndex:indexPath.row] name];
+    Bar* bar = [self.bars objectAtIndex: indexPath.row];
+    
+    cell.nameLabel.text = bar.name;
+    cell.addressLabel.text = bar.address;
+    cell.phoneLabel.text = bar.phone;
+    
+    UIImage* image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: bar.imageUrl]]];
+    if (image == nil) {
+        image = [UIImage imageNamed:@"defaultPictureBar"];
+    }
+    
+    cell.imageViewLabel.image = image;
     
     return cell;
 }
@@ -77,6 +84,11 @@
     barsViewController.bar = selectedBar;
     
     [self.navigationController pushViewController:barsViewController animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
 }
 /*
 // Override to support conditional editing of the table view.

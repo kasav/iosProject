@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Bar.h"
+#import "AppDelegate.h"
+#import "CustomBarTableViewCell.h"
+#import "BarDetailsViewController.h"
+
 
 @interface BarListTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray* bars;
-
--(void) fillWithSampleBars;
 
 @end

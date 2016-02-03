@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="126" id="Rco-rL-XWh" customClass="CustomBarTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="454" height="126"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rco-rL-XWh" id="cBb-x9-Nsz">
+                <rect key="frame" x="0.0" y="0.0" width="454" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vF8-UA-WSv">
+                        <rect key="frame" x="8" y="4" width="151" height="118"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="151" id="6B0-LD-eHU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWU-m6-UJ7">
+                        <rect key="frame" x="172" y="53" width="274" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="JK3-x9-XDD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="858-N4-jBg">
+                        <rect key="frame" x="172" y="8" width="274" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3s-jp-Dvl">
+                        <rect key="frame" x="172" y="81" width="274" height="20"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="858-N4-jBg" firstAttribute="leading" secondItem="vF8-UA-WSv" secondAttribute="trailing" constant="13" id="6Ie-0a-2eH"/>
+                    <constraint firstItem="X3s-jp-Dvl" firstAttribute="top" secondItem="mWU-m6-UJ7" secondAttribute="bottom" constant="8" symbolic="YES" id="A2d-CX-fK4"/>
+                    <constraint firstItem="858-N4-jBg" firstAttribute="top" secondItem="cBb-x9-Nsz" secondAttribute="topMargin" id="ExR-S9-g56"/>
+                    <constraint firstItem="mWU-m6-UJ7" firstAttribute="centerY" secondItem="vF8-UA-WSv" secondAttribute="centerY" id="F4C-00-WsC"/>
+                    <constraint firstItem="vF8-UA-WSv" firstAttribute="top" secondItem="cBb-x9-Nsz" secondAttribute="topMargin" constant="-4" id="KKo-YR-HzL"/>
+                    <constraint firstItem="vF8-UA-WSv" firstAttribute="leading" secondItem="cBb-x9-Nsz" secondAttribute="leadingMargin" id="R6B-g1-cDr"/>
+                    <constraint firstItem="858-N4-jBg" firstAttribute="trailing" secondItem="mWU-m6-UJ7" secondAttribute="trailing" id="WDm-3J-t3a"/>
+                    <constraint firstItem="mWU-m6-UJ7" firstAttribute="trailing" secondItem="cBb-x9-Nsz" secondAttribute="trailingMargin" id="aid-nu-SrF"/>
+                    <constraint firstItem="vF8-UA-WSv" firstAttribute="centerY" secondItem="cBb-x9-Nsz" secondAttribute="centerY" id="dC3-n7-NgA"/>
+                    <constraint firstItem="858-N4-jBg" firstAttribute="leading" secondItem="mWU-m6-UJ7" secondAttribute="leading" id="go3-n1-Tgq"/>
+                    <constraint firstItem="mWU-m6-UJ7" firstAttribute="trailing" secondItem="X3s-jp-Dvl" secondAttribute="trailing" id="njQ-YJ-4h9"/>
+                    <constraint firstItem="X3s-jp-Dvl" firstAttribute="leading" secondItem="mWU-m6-UJ7" secondAttribute="leading" id="yTX-ag-QRm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="X3s-jp-Dvl" secondAttribute="bottom" constant="16" id="zHG-2K-9KK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.73852163461538456" green="0.69703274971458618" blue="0.61448275828258758" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="addressLabel" destination="mWU-m6-UJ7" id="MJk-Ys-TTw"/>
+                <outlet property="imageViewLabel" destination="vF8-UA-WSv" id="AyM-DZ-Sur"/>
+                <outlet property="nameLabel" destination="858-N4-jBg" id="oHP-1Y-hdC"/>
+                <outlet property="phoneLabel" destination="X3s-jp-Dvl" id="wsh-dP-ugK"/>
+            </connections>
+            <point key="canvasLocation" x="314" y="123"/>
+        </tableViewCell>
+    </objects>
+</document>

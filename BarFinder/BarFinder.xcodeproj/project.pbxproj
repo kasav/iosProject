@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20A57931C61294E00D1A094 /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = E20A57921C61294E00D1A094 /* LocalData.m */; };
+		E20A57A11C62281A00D1A094 /* CustomBarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E20A579F1C62281A00D1A094 /* CustomBarTableViewCell.m */; };
+		E20A57A21C62281A00D1A094 /* CustomBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20A57A01C62281A00D1A094 /* CustomBarTableViewCell.xib */; };
 		E250BA3B1C5F863C00BFBB66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA3A1C5F863C00BFBB66 /* main.m */; };
 		E250BA3E1C5F863C00BFBB66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA3D1C5F863C00BFBB66 /* AppDelegate.m */; };
 		E250BA411C5F863C00BFBB66 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA401C5F863C00BFBB66 /* MainViewController.m */; };
@@ -19,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E20A57911C61294E00D1A094 /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalData.h; path = BarFinder/LocalData.h; sourceTree = "<group>"; };
+		E20A57921C61294E00D1A094 /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalData.m; path = BarFinder/LocalData.m; sourceTree = "<group>"; };
+		E20A579E1C62281A00D1A094 /* CustomBarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomBarTableViewCell.h; path = BarFinder/CustomBarTableViewCell.h; sourceTree = "<group>"; };
+		E20A579F1C62281A00D1A094 /* CustomBarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomBarTableViewCell.m; path = BarFinder/CustomBarTableViewCell.m; sourceTree = "<group>"; };
+		E20A57A01C62281A00D1A094 /* CustomBarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomBarTableViewCell.xib; path = BarFinder/CustomBarTableViewCell.xib; sourceTree = "<group>"; };
 		E250BA361C5F863C00BFBB66 /* BarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E250BA3A1C5F863C00BFBB66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E250BA3C1C5F863C00BFBB66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,9 +56,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E20A578D1C61289B00D1A094 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E20A57911C61294E00D1A094 /* LocalData.h */,
+				E20A57921C61294E00D1A094 /* LocalData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		E20A57951C62237900D1A094 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E20A579E1C62281A00D1A094 /* CustomBarTableViewCell.h */,
+				E20A579F1C62281A00D1A094 /* CustomBarTableViewCell.m */,
+				E20A57A01C62281A00D1A094 /* CustomBarTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		E250BA2D1C5F863C00BFBB66 = {
 			isa = PBXGroup;
 			children = (
+				E20A57951C62237900D1A094 /* Views */,
+				E20A578D1C61289B00D1A094 /* Data */,
 				E250BA511C5FCDEC00BFBB66 /* Controllers */,
 				E250BA501C5FCD2300BFBB66 /* Models */,
 				E250BA381C5F863C00BFBB66 /* BarFinder */,
@@ -168,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E250BA491C5F863C00BFBB66 /* LaunchScreen.storyboard in Resources */,
+				E20A57A21C62281A00D1A094 /* CustomBarTableViewCell.xib in Resources */,
 				E250BA461C5F863C00BFBB66 /* Assets.xcassets in Resources */,
 				E250BA441C5F863C00BFBB66 /* Main.storyboard in Resources */,
 			);
@@ -180,11 +210,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20A57931C61294E00D1A094 /* LocalData.m in Sources */,
 				E250BA411C5F863C00BFBB66 /* MainViewController.m in Sources */,
 				E250BA541C5FCE4400BFBB66 /* Bar.m in Sources */,
 				E250BA3E1C5F863C00BFBB66 /* AppDelegate.m in Sources */,
 				E250BA5D1C60050100BFBB66 /* BarDetailsViewController.m in Sources */,
 				E250BA3B1C5F863C00BFBB66 /* main.m in Sources */,
+				E20A57A11C62281A00D1A094 /* CustomBarTableViewCell.m in Sources */,
 				E250BA5A1C5FFF5D00BFBB66 /* BarListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
