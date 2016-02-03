@@ -33,6 +33,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString: @"goToReserveSegue"]) {
+        ReservationViewController* vc = [segue destinationViewController];
+        vc.reserveBar = self.bar;
+    }
+}
 /*
 #pragma mark - Navigation
 

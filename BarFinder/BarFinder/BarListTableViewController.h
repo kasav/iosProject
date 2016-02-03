@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "CustomBarTableViewCell.h"
 #import "BarDetailsViewController.h"
+#import "ReservationViewController.h"
 
 
 @interface BarListTableViewController : UITableViewController

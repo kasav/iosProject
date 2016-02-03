@@ -78,10 +78,14 @@
     
     Bar* selectedBar = [self.bars objectAtIndex:indexPath.row];
     
-    NSString* storyboardId = @"detailsScene";
+//    NSString* storyboardIdSecond = @"reservationScene";    
+//    ReservationViewController* reservationViewController = [self.storyboard instantiateViewControllerWithIdentifier:storyboardIdSecond];
+//    reservationViewController.reserveBar = selectedBar;
     
+    NSString* storyboardId = @"detailsScene";
     BarDetailsViewController* barsViewController = [self.storyboard instantiateViewControllerWithIdentifier:storyboardId];
     barsViewController.bar = selectedBar;
+    
     
     [self.navigationController pushViewController:barsViewController animated:YES];
 }
