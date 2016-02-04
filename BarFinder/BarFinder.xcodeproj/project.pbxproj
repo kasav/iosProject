@@ -37,6 +37,8 @@
 		E250BA541C5FCE4400BFBB66 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA531C5FCE4400BFBB66 /* Bar.m */; };
 		E250BA5A1C5FFF5D00BFBB66 /* BarListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */; };
 		E250BA5D1C60050100BFBB66 /* BarDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */; };
+		E2FCA5891C637B1E0076E56C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FCA5881C637B1E0076E56C /* LoginViewController.swift */; };
+		E2FCA58B1C637B700076E56C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FCA58A1C637B700076E56C /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarListTableViewController.m; path = BarFinder/BarListTableViewController.m; sourceTree = "<group>"; };
 		E250BA5B1C60050100BFBB66 /* BarDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarDetailsViewController.h; path = BarFinder/BarDetailsViewController.h; sourceTree = "<group>"; };
 		E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarDetailsViewController.m; path = BarFinder/BarDetailsViewController.m; sourceTree = "<group>"; };
+		E2FCA5881C637B1E0076E56C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = BarFinder/LoginViewController.swift; sourceTree = "<group>"; };
+		E2FCA58A1C637B700076E56C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = BarFinder/RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,8 @@
 			children = (
 				E250BA3F1C5F863C00BFBB66 /* MainViewController.h */,
 				E250BA401C5F863C00BFBB66 /* MainViewController.m */,
+				E2FCA58A1C637B700076E56C /* RegisterViewController.swift */,
+				E2FCA5881C637B1E0076E56C /* LoginViewController.swift */,
 				E250BA5B1C60050100BFBB66 /* BarDetailsViewController.h */,
 				E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */,
 				E250BA581C5FFF5C00BFBB66 /* BarListTableViewController.h */,
@@ -292,8 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2FCA5891C637B1E0076E56C /* LoginViewController.swift in Sources */,
 				E20A57931C61294E00D1A094 /* LocalData.m in Sources */,
 				E250BA411C5F863C00BFBB66 /* MainViewController.m in Sources */,
+				E2FCA58B1C637B700076E56C /* RegisterViewController.swift in Sources */,
 				E250BA541C5FCE4400BFBB66 /* Bar.m in Sources */,
 				E250BA3E1C5F863C00BFBB66 /* AppDelegate.m in Sources */,
 				E20A57A51C62684200D1A094 /* ReservationViewController.m in Sources */,
@@ -411,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -419,6 +428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GsmHomework.BarFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -426,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

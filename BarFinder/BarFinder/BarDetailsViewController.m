@@ -11,6 +11,7 @@
 @interface BarDetailsViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *pictureView;
 
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
@@ -26,6 +27,13 @@
     self.addressLabel.text = self.bar.address;
     self.phoneLabel.text = self.bar.phone;
     self.descriptionLabel.text = self.bar.textDescription;
+    
+    UIImage* image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: self.bar.imageUrl]]];
+    if (image == nil) {
+        image = [UIImage imageNamed:@"defaultPictureBar"];
+    }
+
+    self.pictureView.image = image;
 }
 
 - (void)didReceiveMemoryWarning {

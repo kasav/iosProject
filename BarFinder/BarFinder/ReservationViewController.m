@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.barNameLabel.text = self.reserveBar.name;
+    [self.datePicker setValue:[UIColor whiteColor] forKeyPath:@"textColor"];
     
 }
 
