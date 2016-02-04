@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Parse setApplicationId:@"QVeEvh5WeLfc0CcPUkgqXxBk9Bb8uTrcBlAPo6us"
+                  clientKey:@"2biEqJuZvolbAWqka9DLVv70q2a3PnL7DhSkC2Hj"];
     self.data = [[LocalData alloc] init];
     
     NSMutableArray* bars = [NSMutableArray arrayWithObjects:
