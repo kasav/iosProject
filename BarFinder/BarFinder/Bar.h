@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface Bar : NSObject
+@interface Bar : PFObject<PFSubclassing>
 
 @property (strong, nonatomic) NSString* name;
 
@@ -31,5 +32,7 @@
               phone: (NSString*) phone
     textDescription: (NSString*) textDescription
         andImageUrl: (NSString*) imageUrl;
+
++(NSString*)parseClassName;
 
 @end

@@ -7,8 +7,16 @@
 //
 
 #import "Bar.h"
+#import <Parse/PFObject+Subclass.h>
+
 
 @implementation Bar
+
+@dynamic name;
+@dynamic address;
+@dynamic phone;
+@dynamic textDescription;
+@dynamic imageUrl;
 
 -(instancetype) initWithName: (NSString*) name
                      address: (NSString*) address
@@ -40,6 +48,14 @@
                                phone:phone
                       textDescription:textDescription
                          andImageUrl:imageUrl];
+}
+
++(NSString*)parseClassName {
+    return @"Bar";
+}
+
++ (void)load {
+    [self registerSubclass];
 }
 
 @end
