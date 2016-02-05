@@ -37,6 +37,8 @@
 		E250BA541C5FCE4400BFBB66 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA531C5FCE4400BFBB66 /* Bar.m */; };
 		E250BA5A1C5FFF5D00BFBB66 /* BarListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */; };
 		E250BA5D1C60050100BFBB66 /* BarDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */; };
+		E2F7A23A1C65218F0080B1F6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7A2391C65218F0080B1F6 /* SearchViewController.m */; };
+		E2F7A23D1C6523720080B1F6 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7A23C1C6523720080B1F6 /* SearchTableViewController.m */; };
 		E2FCA5891C637B1E0076E56C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FCA5881C637B1E0076E56C /* LoginViewController.swift */; };
 		E2FCA58B1C637B700076E56C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FCA58A1C637B700076E56C /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +85,10 @@
 		E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarListTableViewController.m; path = BarFinder/BarListTableViewController.m; sourceTree = "<group>"; };
 		E250BA5B1C60050100BFBB66 /* BarDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarDetailsViewController.h; path = BarFinder/BarDetailsViewController.h; sourceTree = "<group>"; };
 		E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarDetailsViewController.m; path = BarFinder/BarDetailsViewController.m; sourceTree = "<group>"; };
+		E2F7A2381C65218E0080B1F6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = BarFinder/SearchViewController.h; sourceTree = "<group>"; };
+		E2F7A2391C65218F0080B1F6 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = BarFinder/SearchViewController.m; sourceTree = "<group>"; };
+		E2F7A23B1C6523720080B1F6 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchTableViewController.h; path = BarFinder/SearchTableViewController.h; sourceTree = "<group>"; };
+		E2F7A23C1C6523720080B1F6 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTableViewController.m; path = BarFinder/SearchTableViewController.m; sourceTree = "<group>"; };
 		E2FCA5881C637B1E0076E56C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = BarFinder/LoginViewController.swift; sourceTree = "<group>"; };
 		E2FCA58A1C637B700076E56C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = BarFinder/RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +220,10 @@
 			isa = PBXGroup;
 			children = (
 				E250BA3F1C5F863C00BFBB66 /* MainViewController.h */,
+				E2F7A23B1C6523720080B1F6 /* SearchTableViewController.h */,
+				E2F7A23C1C6523720080B1F6 /* SearchTableViewController.m */,
+				E2F7A2381C65218E0080B1F6 /* SearchViewController.h */,
+				E2F7A2391C65218F0080B1F6 /* SearchViewController.m */,
 				E250BA401C5F863C00BFBB66 /* MainViewController.m */,
 				E2FCA58A1C637B700076E56C /* RegisterViewController.swift */,
 				E2FCA5881C637B1E0076E56C /* LoginViewController.swift */,
@@ -299,11 +309,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2FCA5891C637B1E0076E56C /* LoginViewController.swift in Sources */,
+				E2F7A23A1C65218F0080B1F6 /* SearchViewController.m in Sources */,
 				E20A57931C61294E00D1A094 /* LocalData.m in Sources */,
 				E250BA411C5F863C00BFBB66 /* MainViewController.m in Sources */,
 				E2FCA58B1C637B700076E56C /* RegisterViewController.swift in Sources */,
 				E250BA541C5FCE4400BFBB66 /* Bar.m in Sources */,
 				E250BA3E1C5F863C00BFBB66 /* AppDelegate.m in Sources */,
+				E2F7A23D1C6523720080B1F6 /* SearchTableViewController.m in Sources */,
 				E20A57A51C62684200D1A094 /* ReservationViewController.m in Sources */,
 				E250BA5D1C60050100BFBB66 /* BarDetailsViewController.m in Sources */,
 				E20A57A81C62928F00D1A094 /* Reservation.m in Sources */,

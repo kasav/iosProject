@@ -22,6 +22,7 @@
     AppDelegate* delegate = [UIApplication sharedApplication].delegate;
     self.bars = [delegate.data bars];
     
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
