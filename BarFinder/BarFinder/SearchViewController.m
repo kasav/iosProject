@@ -38,9 +38,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString: @"searchToListSegue"]) {
-        SearchTableViewController* searchTableViewController = [segue destinationViewController];
-        searchTableViewController.wordToCheck = self.stringToCheck;
-        searchTableViewController.propertyToCheck = self.propertyToCheck;
+        BarListTableViewController* barListViewController = [segue destinationViewController];
+        barListViewController.wordToCheck = self.stringToCheck;
+        barListViewController.propertyToCheck = self.propertyToCheck;
     }
 }
 

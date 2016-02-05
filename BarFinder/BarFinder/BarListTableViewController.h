@@ -16,6 +16,7 @@
 
 @interface BarListTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSMutableArray* bars;
+@property (strong, nonatomic) NSString* wordToCheck;
+@property (strong, nonatomic) NSString* propertyToCheck;
 
 @end

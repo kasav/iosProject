@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SearchTableViewController.h"
+#import "BarListTableViewController.h"
 
 @interface SearchViewController : UIViewController
 

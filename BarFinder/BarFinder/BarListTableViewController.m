@@ -11,6 +11,8 @@
 
 @interface BarListTableViewController ()
 
+@property (strong, nonatomic) NSMutableArray* bars;
+
 @end
 
 @implementation BarListTableViewController
@@ -21,14 +23,14 @@
     
     AppDelegate* delegate = [UIApplication sharedApplication].delegate;
     self.bars = [delegate.data bars];
-    
-    
+ 
+    if (self.wordToCheck) {
+        NSString* filter = @"%K CONTAINS[c] %@";
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:filter, self.propertyToCheck, self.wordToCheck];
+        NSArray *remainingBars = [self.bars filteredArrayUsingPredicate:predicate];
+        self.bars = [[NSMutableArray alloc] initWithArray:remainingBars];
+    }
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
