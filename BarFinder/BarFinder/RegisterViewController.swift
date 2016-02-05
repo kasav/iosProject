@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Parse
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet weak var firstNameTextInput: UITextField!
-    @IBOutlet weak var lastNameTextInput: UITextField!
+
+    @IBOutlet weak var usernameTextInput: UITextField!
     @IBOutlet weak var emailTextInput: UITextField!
     @IBOutlet weak var passwordTextInput: UITextField!
     @IBOutlet weak var repeatPasswordTextInput: UITextField!
@@ -19,27 +20,20 @@ class RegisterViewController: UIViewController {
     @IBAction func registerButtonTapped(sender: AnyObject) {
         let errorTitle = "Грешка!";
         let succsessTitle = "Успех!";
-        let firstNameErrorMessage = "Липсва име!";
-        let lastNameErrorMessage = "Липсва фамилия!";
+        let usernameErrorMessage = "Липсва име!";
         let emailErrorMessage = "Невалидна поща!";
         let passwordErrorMessage = "Липсва парола от поне 3 символа!";
         let passwordsDontMatchMessage = "Паролите не съвпадат!";
         let successMessage = "Регистрацията е успешна!";
         
-        let userFirstName = firstNameTextInput.text;
-        let userLastName = lastNameTextInput.text;
+        let username = usernameTextInput.text;
         let userEmail = emailTextInput.text;
         let userPassword = passwordTextInput.text;
         let userRepeatPassword = repeatPasswordTextInput.text;
         
-        if userFirstName?.isEmpty == true
+        if username?.isEmpty == true
         {
-            displayAlertMessage(errorTitle, message: firstNameErrorMessage);
-            return;
-        }
-        if userLastName?.isEmpty == true
-        {
-            displayAlertMessage(errorTitle, message: lastNameErrorMessage);
+            displayAlertMessage(errorTitle, message: usernameErrorMessage);
             return;
         }
         
@@ -62,13 +56,22 @@ class RegisterViewController: UIViewController {
         }
         
         
-        NSUserDefaults.standardUserDefaults().setObject(userFirstName, forKey: "userFirstName");
-        NSUserDefaults.standardUserDefaults().setObject(userLastName, forKey: "userLastName");
-        NSUserDefaults.standardUserDefaults().setObject(userEmail, forKey: "userEmail");
-        NSUserDefaults.standardUserDefaults().setObject(userPassword, forKey: "userPassword");
-        NSUserDefaults.standardUserDefaults().synchronize();
+        let user = PFUser()
+        user.username = username;
+        user.email = userEmail;
+        user.password = userPassword;
         
-        displayAlertMessage(succsessTitle, message: successMessage);
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool, error: NSError?) -> Void in
+            if let error = error {
+                let errorString = error.userInfo["error"] as? String
+                self.displayAlertMessage(errorTitle, message:errorString!);
+            } else {
+                self.displayAlertMessage(succsessTitle, message: successMessage);
+            }
+        }
+        
+        
         
     }
     

@@ -14,10 +14,14 @@
 
 @property NSInteger peopleCount;
 
+@property (strong, nonatomic) NSString* senderEmail;
+
 -(instancetype) initWithDate: (NSDate*) date
-              andPeopleCount: (NSInteger) peopleCount;
+                 peopleCount: (NSInteger) peopleCount
+              andSenderEmail: (NSString*) senderEmail;
 
 +(Reservation*) ReservationWithDate: (NSDate*) date
-              andPeopleCount: (NSInteger) peopleCount;
+                        peopleCount: (NSInteger) peopleCount
+                     andSenderEmail: (NSString*) senderEmail;
 
 @end

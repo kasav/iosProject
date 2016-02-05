@@ -10,9 +10,10 @@
 
 @interface ReservationViewController ()
 
-@property (strong, nonatomic) NSDate* date;
 @property (strong, nonatomic) NSString* dateAsString;
+@property (strong, nonatomic) NSDate* date;
 @property NSInteger peopleCount;
+@property (strong, nonatomic) NSString* userEmail;
 
 @end
 
@@ -54,54 +55,25 @@
 - (IBAction)reseveConfirmTapped:(id)sender {
     
     self.peopleCount = [self.reservePeopleInput.text intValue];
+    PFUser* currentUser = [PFUser currentUser];
     
+    if (currentUser) {
+        self.userEmail = currentUser.email;
+    }
+    else {
+        [self buildNotPossibleAlertWithTitle:@"Резервацията не е възможна!"
+                                  andMessage:@"За да резервирате трябва да сте логнат потребител. Моля, логнете се от началната страница на приложението."];
+        return;
+    }
     
     
     if ([self reservationInputIsValid:self.date andCount:self.peopleCount]) {
-        UIAlertController * alert= [UIAlertController
-                                    alertControllerWithTitle:@"Резервация"
-                                    message:[NSString stringWithFormat: @"Резервирате маса %li души в %@ за %@?",(long)self.peopleCount, self.reserveBar.name, self.dateAsString]
-                                    preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* yesButton = [UIAlertAction
-                                    actionWithTitle:@"Да"
-                                    style:UIAlertActionStyleDefault
-                                    handler:^(UIAlertAction * action)
-                                    {
-                                        [[Reservation alloc] initWithDate:self.date andPeopleCount:self.peopleCount];
-                                        
-                                        
-                                    }];
-        UIAlertAction* noButton = [UIAlertAction
-                                   actionWithTitle:@"Не"
-                                   style:UIAlertActionStyleDefault
-                                   handler:^(UIAlertAction * action)
-                                   {
-                                       [self closeAlertview];
-                                   }];
-        
-        [alert addAction:yesButton];
-        [alert addAction:noButton];
-        
-        [self presentViewController:alert animated:YES completion:nil];
-        
+        [self buildConformationAlertWithPeople:self.peopleCount barName:self.reserveBar.name andDateString:self.dateAsString];
     }
     else {
-        UIAlertController * alert= [UIAlertController
-                                    alertControllerWithTitle:@"Резервация"
-                                    message: @"Невалидни данни за резервация"
-                                    preferredStyle:UIAlertControllerStyleAlert];
+        [self buildNotPossibleAlertWithTitle:@"Резервацията не е възможна!"
+                                  andMessage:@"Въведената информация не е коректна."];
         
-        UIAlertAction* yesButton = [UIAlertAction
-                                    actionWithTitle:@"OK"
-                                    style:UIAlertActionStyleDefault
-                                    handler:^(UIAlertAction * action)
-                                    {
-                                        [self closeAlertview];
-                                    }];
-        [alert addAction:yesButton];
-        [self presentViewController:alert animated:YES completion:nil];
-
     }
     
 }
@@ -121,4 +93,54 @@
     return YES;
     
 }
+
+-(void) buildNotPossibleAlertWithTitle: (NSString*) title andMessage:(NSString*) message {
+    UIAlertController * alert= [UIAlertController
+                                alertControllerWithTitle: title
+                                message: message
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"OK"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action)
+                                {
+                                    [self closeAlertview];
+                                }];
+    [alert addAction:yesButton];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+-(void) buildConformationAlertWithPeople: (NSInteger)peopleCount barName:(NSString*) barName andDateString:(NSString*)dateOfReservation {
+    UIAlertController * alert= [UIAlertController
+                                alertControllerWithTitle:@"Резервация"
+                                message:[NSString stringWithFormat: @"Резервирате маса %li души в %@ за %@?",(long)peopleCount, barName, dateOfReservation]
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"Да"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action)
+                                {
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                }];
+    UIAlertAction* noButton = [UIAlertAction
+                               actionWithTitle:@"Не"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action)
+                               {
+                                   [self closeAlertview];
+                               }];
+    
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 @end

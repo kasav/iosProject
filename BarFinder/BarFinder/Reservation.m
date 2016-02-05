@@ -11,18 +11,21 @@
 @implementation Reservation
 
 -(instancetype) initWithDate: (NSDate*) date
-              andPeopleCount: (NSInteger) peopleCount{
+                 peopleCount: (NSInteger) peopleCount
+              andSenderEmail: (NSString*) senderEmail;{
     self = [super init];
     if (self) {
         self.date = date;
         self.peopleCount = peopleCount;
+        self.senderEmail = senderEmail;
     }
     return self;
 }
 
 +(Reservation*) ReservationWithDate: (NSDate*) date
-                     andPeopleCount: (NSInteger) peopleCount{
-    return [[Reservation alloc] initWithDate:date andPeopleCount:peopleCount];
+                        peopleCount: (NSInteger) peopleCount
+                     andSenderEmail: (NSString *) senderEmail {
+    return [[Reservation alloc] initWithDate:date peopleCount:peopleCount andSenderEmail:senderEmail];
 }
 
 

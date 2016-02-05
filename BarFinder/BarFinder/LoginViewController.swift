@@ -7,9 +7,47 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
+
+
+    @IBOutlet weak var usernameTextInput: UITextField!
+    
+    @IBOutlet weak var inputFieldPassword: UITextField!
+    
+    @IBAction func LoginButtonTapped(sender: AnyObject) {
+        
+        
+        let username = usernameTextInput.text;
+        let userPassword = inputFieldPassword.text;
+        
+        PFUser.logInWithUsernameInBackground(username!, password:userPassword!) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                self.displayAlertMessage("Успех!", message: "Успешен логин!");
+            } else {
+                self.displayAlertMessage("Грешка!", message: "Неуспешен логин!");
+
+            }
+        }
+    }
+    
+    @IBAction func LogOutButtonTapped(sender: AnyObject) {
+        PFUser.logOut();
+        self.displayAlertMessage("Успех!", message: "Успешно отписване!");
+    }
+    
+    func displayAlertMessage (title: String, message: String)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler:nil);
+        alert.addAction(okAction);
+        
+        self.presentViewController(alert, animated: true, completion: nil);
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
