@@ -7,21 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface Reservation : NSObject
+@interface Reservation : PFObject<PFSubclassing>
 
 @property (strong, nonatomic) NSDate* date;
 
 @property NSInteger peopleCount;
 
+@property (strong, nonatomic) NSString* barName;
+
 @property (strong, nonatomic) NSString* senderEmail;
 
 -(instancetype) initWithDate: (NSDate*) date
                  peopleCount: (NSInteger) peopleCount
+                     barName: (NSString*) barName
               andSenderEmail: (NSString*) senderEmail;
 
 +(Reservation*) ReservationWithDate: (NSDate*) date
                         peopleCount: (NSInteger) peopleCount
+                            barName: (NSString*) barName
                      andSenderEmail: (NSString*) senderEmail;
+
++(NSString*)parseClassName;
 
 @end

@@ -23,6 +23,7 @@
                   clientKey:@"2biEqJuZvolbAWqka9DLVv70q2a3PnL7DhSkC2Hj"];
     self.data = [[LocalData alloc] init];
     
+    
     PFQuery* query = [PFQuery queryWithClassName: [Bar parseClassName]];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error) {
@@ -32,6 +33,10 @@
         }
         
     }];
+    
+    UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
     
 //   NSMutableArray* bars = [NSMutableArray arrayWithObjects:
 //                 [Bar BarWithName:@"Niagara" address:@"ul. Obikolna 15" phone:@"0888151515"textDescription: @"Svqstna picariq" andImageUrl:@"http://photos.mandarinoriental.com/is/image/MandarinOriental/excelsior-restaurant-dickens-bar?$DetailBannerHeight$"],

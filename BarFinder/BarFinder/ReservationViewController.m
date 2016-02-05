@@ -100,7 +100,7 @@
 
 -(BOOL)reservationInputIsValid: (NSDate*)date andCount:(NSInteger)peopleCount {
     
-    if([date compare: [NSDate date]]== NSOrderedAscending || peopleCount <=0){
+    if([date compare: [NSDate date]]== NSOrderedAscending || date == nil || peopleCount <=0){
         return NO;
     }
     
@@ -132,10 +132,19 @@
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction * action)
                                 {
-                                    
-                                    
-                                    
-                                    
+                                    Reservation* reservation = [Reservation object];
+                                    reservation.senderEmail = self.userEmail;
+                                    reservation.peopleCount= self.peopleCount;
+                                    reservation.date = self.date;
+                                    reservation.barName= self.reserveBar.name;
+                                    [reservation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                        if (!error) {
+                                            [self buildNotificationForReserveInBar:self.reserveBar.name forDate:self.dateAsString];
+                                        } else {
+                                            [self buildNotPossibleAlertWithTitle:@"Резервацията неуспешна!"
+                                                                      andMessage:@"Грешка при връзка с база данни."];
+                                        }
+                                    }];
                                     
                                     
                                 }];
@@ -151,6 +160,21 @@
     [alert addAction:noButton];
     
     [self presentViewController:alert animated:YES completion:nil];
+}
+
+-(void) buildNotificationForReserveInBar: (NSString*)barName forDate:(NSString*) dateAsString{
+    
+    
+    NSDate* fireAt = [NSDate dateWithTimeIntervalSinceNow:3];
+    
+    UIApplication* app = [UIApplication sharedApplication];
+    UILocalNotification* notification = [[UILocalNotification alloc] init];
+    notification.fireDate = fireAt;
+    notification.alertTitle = @"Резервация";
+    notification.alertBody = [NSString stringWithFormat: @"Направихте резервация в %@ за дата %@",barName, dateAsString];
+    
+   [app scheduleLocalNotification:notification];
+    
 }
 
 @end

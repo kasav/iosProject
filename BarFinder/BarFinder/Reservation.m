@@ -10,13 +10,21 @@
 
 @implementation Reservation
 
+@dynamic date;
+@dynamic peopleCount;
+@dynamic barName;
+@dynamic senderEmail;
+
 -(instancetype) initWithDate: (NSDate*) date
                  peopleCount: (NSInteger) peopleCount
-              andSenderEmail: (NSString*) senderEmail;{
+                     barName: (NSString*) barName
+              andSenderEmail: (NSString*) senderEmail
+{
     self = [super init];
     if (self) {
         self.date = date;
         self.peopleCount = peopleCount;
+        self.barName = barName;
         self.senderEmail = senderEmail;
     }
     return self;
@@ -24,9 +32,18 @@
 
 +(Reservation*) ReservationWithDate: (NSDate*) date
                         peopleCount: (NSInteger) peopleCount
-                     andSenderEmail: (NSString *) senderEmail {
-    return [[Reservation alloc] initWithDate:date peopleCount:peopleCount andSenderEmail:senderEmail];
+                            barName: (NSString*) barName
+                     andSenderEmail: (NSString*) senderEmail
+{
+    return [[Reservation alloc] initWithDate:date peopleCount:peopleCount barName:barName andSenderEmail:senderEmail];
 }
 
++(NSString*)parseClassName {
+    return @"Reservation";
+}
+
++ (void)load {
+    [self registerSubclass];
+}
 
 @end

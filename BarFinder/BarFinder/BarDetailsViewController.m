@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionLabel;
+- (IBAction)phoneButtonTapped:(id)sender;
 
 @end
 
@@ -59,4 +60,8 @@
 }
 */
 
+- (IBAction)phoneButtonTapped:(id)sender {
+    NSString *phoneNumber = [@"tel://" stringByAppendingString:self.bar.phone];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
 @end
