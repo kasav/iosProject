@@ -10,6 +10,16 @@
 
 @interface ReservationViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *barNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *barAddressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *barPhoneLabel;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UILabel *showDateLabel;
+@property (weak, nonatomic) IBOutlet UITextField *reservePeopleInput;
+- (IBAction)datePickedButton:(id)sender;
+- (IBAction)reserveConfirmTapped:(id)sender;
+
+
 @property (strong, nonatomic) NSString* dateAsString;
 @property (strong, nonatomic) NSDate* date;
 @property NSInteger peopleCount;
@@ -21,7 +31,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Резервация";
+    
     self.barNameLabel.text = self.reserveBar.name;
+    self.barAddressLabel.text = self.reserveBar.address;
+    self.barPhoneLabel.text = self.reserveBar.phone;
     [self.datePicker setValue:[UIColor whiteColor] forKeyPath:@"textColor"];
     
 }
@@ -48,11 +62,11 @@
     [formatter setDateFormat:@"HH:mm-dd/MM/yyyy"];
     self.dateAsString = [formatter stringFromDate:self.date];
     
-    NSString* dateStamp = [[NSString alloc] initWithFormat:@"Избрана дата: %@", self.dateAsString];
+    NSString* dateStamp = [[NSString alloc] initWithFormat:@"%@", self.dateAsString];
     self.showDateLabel.text = dateStamp;
 }
 
-- (IBAction)reseveConfirmTapped:(id)sender {
+- (IBAction)reserveConfirmTapped:(id)sender {
     
     self.peopleCount = [self.reservePeopleInput.text intValue];
     PFUser* currentUser = [PFUser currentUser];
@@ -75,7 +89,7 @@
                                   andMessage:@"Въведената информация не е коректна."];
         
     }
-    
+
 }
                                     
 -(void)closeAlertview
@@ -95,15 +109,13 @@
 }
 
 -(void) buildNotPossibleAlertWithTitle: (NSString*) title andMessage:(NSString*) message {
-    UIAlertController * alert= [UIAlertController
-                                alertControllerWithTitle: title
-                                message: message
-                                preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert= [UIAlertController alertControllerWithTitle: title
+                                                                   message: message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* yesButton = [UIAlertAction
-                                actionWithTitle:@"OK"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action)
+    UIAlertAction* yesButton = [UIAlertAction actionWithTitle:@"OK"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction * action)
                                 {
                                     [self closeAlertview];
                                 }];
@@ -112,15 +124,13 @@
 }
 
 -(void) buildConformationAlertWithPeople: (NSInteger)peopleCount barName:(NSString*) barName andDateString:(NSString*)dateOfReservation {
-    UIAlertController * alert= [UIAlertController
-                                alertControllerWithTitle:@"Резервация"
-                                message:[NSString stringWithFormat: @"Резервирате маса %li души в %@ за %@?",(long)peopleCount, barName, dateOfReservation]
-                                preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert= [UIAlertController alertControllerWithTitle:@"Резервация"
+                                                                   message:[NSString stringWithFormat: @"Резервирате маса %li души в %@ за %@?",(long)peopleCount, barName, dateOfReservation]
+                                                            preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* yesButton = [UIAlertAction
-                                actionWithTitle:@"Да"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action)
+    UIAlertAction* yesButton = [UIAlertAction actionWithTitle:@"Да"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction * action)
                                 {
                                     
                                     

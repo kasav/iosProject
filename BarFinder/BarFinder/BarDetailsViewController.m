@@ -23,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Детайли";
+    
     self.nameLabel.text = self.bar.name;
     self.addressLabel.text = self.bar.address;
     self.phoneLabel.text = self.bar.phone;

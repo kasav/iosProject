@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Заведения";
     
     AppDelegate* delegate = [UIApplication sharedApplication].delegate;
     self.bars = [delegate.data bars];
