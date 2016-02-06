@@ -37,6 +37,8 @@
 		E250BA541C5FCE4400BFBB66 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA531C5FCE4400BFBB66 /* Bar.m */; };
 		E250BA5A1C5FFF5D00BFBB66 /* BarListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */; };
 		E250BA5D1C60050100BFBB66 /* BarDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */; };
+		E265EEF21C661DAC00B8E0F7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E265EEF11C661DAC00B8E0F7 /* MapKit.framework */; };
+		E265EEF41C66842900B8E0F7 /* MapPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265EEF31C66842900B8E0F7 /* MapPositionViewController.swift */; };
 		E2F7A23A1C65218F0080B1F6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7A2391C65218F0080B1F6 /* SearchViewController.m */; };
 		E2FCA5891C637B1E0076E56C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FCA5881C637B1E0076E56C /* LoginViewController.swift */; };
 		E2FCA58B1C637B700076E56C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FCA58A1C637B700076E56C /* RegisterViewController.swift */; };
@@ -84,6 +86,8 @@
 		E250BA591C5FFF5D00BFBB66 /* BarListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarListTableViewController.m; path = BarFinder/BarListTableViewController.m; sourceTree = "<group>"; };
 		E250BA5B1C60050100BFBB66 /* BarDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarDetailsViewController.h; path = BarFinder/BarDetailsViewController.h; sourceTree = "<group>"; };
 		E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarDetailsViewController.m; path = BarFinder/BarDetailsViewController.m; sourceTree = "<group>"; };
+		E265EEF11C661DAC00B8E0F7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E265EEF31C66842900B8E0F7 /* MapPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPositionViewController.swift; path = BarFinder/MapPositionViewController.swift; sourceTree = "<group>"; };
 		E2F7A2381C65218E0080B1F6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = BarFinder/SearchViewController.h; sourceTree = "<group>"; };
 		E2F7A2391C65218F0080B1F6 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = BarFinder/SearchViewController.m; sourceTree = "<group>"; };
 		E2FCA5881C637B1E0076E56C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = BarFinder/LoginViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E265EEF21C661DAC00B8E0F7 /* MapKit.framework in Frameworks */,
 				E20A57C71C62BAAC00D1A094 /* libsqlite3.tbd in Frameworks */,
 				E20A57C81C62BAAC00D1A094 /* libz.tbd in Frameworks */,
 				E20A57C11C62BA6700D1A094 /* QuartzCore.framework in Frameworks */,
@@ -139,6 +144,7 @@
 		E20A57C91C62BAD100D1A094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E265EEF11C661DAC00B8E0F7 /* MapKit.framework */,
 				E20A57C51C62BAAC00D1A094 /* libsqlite3.tbd */,
 				E20A57C61C62BAAC00D1A094 /* libz.tbd */,
 				E20A57BD1C62BA6700D1A094 /* QuartzCore.framework */,
@@ -218,6 +224,7 @@
 			children = (
 				E250BA3F1C5F863C00BFBB66 /* MainViewController.h */,
 				E2F7A2381C65218E0080B1F6 /* SearchViewController.h */,
+				E265EEF31C66842900B8E0F7 /* MapPositionViewController.swift */,
 				E2F7A2391C65218F0080B1F6 /* SearchViewController.m */,
 				E250BA401C5F863C00BFBB66 /* MainViewController.m */,
 				E2FCA58A1C637B700076E56C /* RegisterViewController.swift */,
@@ -303,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E265EEF41C66842900B8E0F7 /* MapPositionViewController.swift in Sources */,
 				E2FCA5891C637B1E0076E56C /* LoginViewController.swift in Sources */,
 				E2F7A23A1C65218F0080B1F6 /* SearchViewController.m in Sources */,
 				E20A57931C61294E00D1A094 /* LocalData.m in Sources */,
