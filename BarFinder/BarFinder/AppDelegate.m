@@ -23,17 +23,17 @@
                   clientKey:@"2biEqJuZvolbAWqka9DLVv70q2a3PnL7DhSkC2Hj"];
     self.data = [[LocalData alloc] init];
     
-    
+    __weak typeof(self) weakSelf = self;
     PFQuery* query = [PFQuery queryWithClassName: [Bar parseClassName]];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error) {
             for (Bar* b in objects){
                
-                if ([self stringLengthIsValid:b.name] &&
-                    [self stringLengthIsValid:b.address] &&
-                    [self stringLengthIsValidForPhone:b.phone]) {
+                if ([weakSelf stringLengthIsValid:b.name] &&
+                    [weakSelf stringLengthIsValid:b.address] &&
+                    [weakSelf stringLengthIsValidForPhone:b.phone]) {
                     
-                    [self.data addBar:b];
+                    [weakSelf.data addBar:b];
                 }
             }
         }

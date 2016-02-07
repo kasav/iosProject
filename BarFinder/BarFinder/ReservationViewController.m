@@ -117,20 +117,21 @@
                                                                    message:[NSString stringWithFormat: @"Резервирате маса %li души в %@ за %@?",(long)peopleCount, barName, dateOfReservation]
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
+    __weak typeof(self) weakSelf = self;
     UIAlertAction* yesButton = [UIAlertAction actionWithTitle:@"Да"
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction * action)
                                 {
                                     Reservation* reservation = [Reservation object];
-                                    reservation.senderEmail = self.userEmail;
-                                    reservation.peopleCount= self.peopleCount;
-                                    reservation.date = self.date;
-                                    reservation.barName= self.reserveBar.name;
+                                    reservation.senderEmail = weakSelf.userEmail;
+                                    reservation.peopleCount= weakSelf.peopleCount;
+                                    reservation.date = weakSelf.date;
+                                    reservation.barName= weakSelf.reserveBar.name;
                                     [reservation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                                         if (!error) {
-                                            [self buildNotificationForReserveInBar:self.reserveBar.name forDate:self.dateAsString];
+                                            [weakSelf buildNotificationForReserveInBar:weakSelf.reserveBar.name forDate:weakSelf.dateAsString];
                                         } else {
-                                            [self buildNotPossibleAlertWithTitle:@"Резервацията неуспешна!"
+                                            [weakSelf buildNotPossibleAlertWithTitle:@"Резервацията неуспешна!"
                                                                       andMessage:@"Грешка при връзка с база данни."];
                                         }
                                     }];

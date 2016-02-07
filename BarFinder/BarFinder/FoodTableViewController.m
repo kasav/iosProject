@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.products = [[NSMutableArray alloc]init];
+    
+    __weak typeof(self) weakSelf = self;
     PFQuery* query = [PFQuery queryWithClassName: self.option];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error) {
@@ -33,9 +35,9 @@
                 NSString * name = [product objectForKey:@"name"];
                 CGFloat price = [[product objectForKey:@"price"] floatValue];
                 
-                if ([self stringLengthIsValid:name]) {
+                if ([weakSelf stringLengthIsValid:name]) {
                     id item = [[Product alloc] initWithName:name andPrice:price];
-                    [self.products addObject:item];
+                    [weakSelf.products addObject:item];
                 }
             }
             [self.tableView reloadData];
