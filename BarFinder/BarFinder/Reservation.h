@@ -12,11 +12,8 @@
 @interface Reservation : PFObject<PFSubclassing>
 
 @property (strong, nonatomic) NSDate* date;
-
 @property NSInteger peopleCount;
-
 @property (strong, nonatomic) NSString* barName;
-
 @property (strong, nonatomic) NSString* senderEmail;
 
 -(instancetype) initWithDate: (NSDate*) date

@@ -47,15 +47,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)datePickedButton:(id)sender {
     self.date = [self.datePicker date];
@@ -73,6 +64,7 @@
     self.peopleCount = [self.reservePeopleInput.text intValue];
     PFUser* currentUser = [PFUser currentUser];
     
+    //check if there is an user logged in and build apropriate message
     if (currentUser) {
         self.userEmail = currentUser.email;
     }
@@ -82,7 +74,7 @@
         return;
     }
     
-    
+    //check if input is valid and build apropriate message
     if ([self reservationInputIsValid:self.date andCount:self.peopleCount]) {
         [self buildConformationAlertWithPeople:self.peopleCount barName:self.reserveBar.name andDateString:self.dateAsString];
     }
@@ -93,12 +85,7 @@
     }
 
 }
-                                    
--(void)closeAlertview
-{
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 
 -(BOOL)reservationInputIsValid: (NSDate*)date andCount:(NSInteger)peopleCount {
     
@@ -164,8 +151,17 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
--(void) buildNotificationForReserveInBar: (NSString*)barName forDate:(NSString*) dateAsString{
+-(void)closeAlertview
+{
     
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
+
+
+-(void) buildNotificationForReserveInBar: (NSString*)barName forDate:(NSString*) dateAsString{    
     
     NSDate* fireAt = [NSDate dateWithTimeIntervalSinceNow:3];
     

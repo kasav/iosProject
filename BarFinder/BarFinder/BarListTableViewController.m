@@ -62,8 +62,6 @@
     if (cell == nil) {
         NSArray* topCells = [[NSBundle mainBundle] loadNibNamed:@"CustomBarTableViewCell" owner:self options:nil];
         cell = [topCells objectAtIndex:0];
-        
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: cellIdentifier];
     }
     
     Bar* bar = [self.bars objectAtIndex: indexPath.row];
@@ -85,11 +83,7 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     Bar* selectedBar = [self.bars objectAtIndex:indexPath.row];
-    
-//    NSString* storyboardIdSecond = @"reservationScene";    
-//    ReservationViewController* reservationViewController = [self.storyboard instantiateViewControllerWithIdentifier:storyboardIdSecond];
-//    reservationViewController.reserveBar = selectedBar;
-    
+        
     NSString* storyboardId = @"detailsScene";
     BarDetailsViewController* barsViewController = [self.storyboard instantiateViewControllerWithIdentifier:storyboardId];
     barsViewController.bar = selectedBar;

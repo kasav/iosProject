@@ -11,7 +11,12 @@ import Parse
 
 class LoginViewController: UIViewController {
 
-
+    let successTitle = "Успех!";
+    let errorTitle = "Грешка!";
+    let confirmTitle = "OK";
+    let successLoginMessage = "Успешен логин!";
+    let successLogoutMessage = "Успешно отписване!";
+    let errorLoginMessage = "Неуспешен логин!";
 
     @IBOutlet weak var usernameTextInput: UITextField!
     
@@ -26,9 +31,9 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(username!, password:userPassword!) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
-                self.displayAlertMessage("Успех!", message: "Успешен логин!");
+                self.displayAlertMessage(self.successTitle, message: self.successLoginMessage);
             } else {
-                self.displayAlertMessage("Грешка!", message: "Неуспешен логин!");
+                self.displayAlertMessage(self.errorTitle, message: self.errorLoginMessage);
 
             }
         }
@@ -36,13 +41,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func LogOutButtonTapped(sender: AnyObject) {
         PFUser.logOut();
-        self.displayAlertMessage("Успех!", message: "Успешно отписване!");
+        self.displayAlertMessage(self.successTitle, message: self.successLogoutMessage);
     }
     
     func displayAlertMessage (title: String, message: String)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler:nil);
+        let okAction = UIAlertAction(title: self.confirmTitle, style: UIAlertActionStyle.Cancel, handler:nil);
         alert.addAction(okAction);
         
         self.presentViewController(alert, animated: true, completion: nil);
@@ -58,16 +63,5 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

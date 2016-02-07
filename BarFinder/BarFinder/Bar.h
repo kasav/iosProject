@@ -12,13 +12,9 @@
 @interface Bar : PFObject<PFSubclassing>
 
 @property (strong, nonatomic) NSString* name;
-
 @property (strong, nonatomic) NSString* address;
-
 @property (strong, nonatomic) NSString* phone;
-
 @property (strong, nonatomic) NSString* textDescription;
-
 @property (strong, nonatomic) NSString* imageUrl;
 
 -(instancetype) initWithName: (NSString*) name

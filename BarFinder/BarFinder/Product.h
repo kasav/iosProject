@@ -12,8 +12,8 @@
 @interface Product : NSObject
 
 @property (strong, nonatomic) NSString* name;
-
 @property CGFloat price;
+
 
 -(instancetype) initWithName: (NSString*) name
                     andPrice: (CGFloat) price;

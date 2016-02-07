@@ -64,22 +64,12 @@
     UITableViewCell* thisCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (thisCell == nil) {
-//       NSArray* topCells = [[NSBundle mainBundle] loadNibNamed:@"CustomProductTableViewCell" owner:self options:nil];
-//       thisCell = [topCells objectAtIndex:0];
        thisCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: cellIdentifier];
     }
     
     Product* product = [self.products objectAtIndex: indexPath.row];
-    
     thisCell.textLabel.text = product.name;
-   // thisCell.priceLabel.text = [NSString stringWithFormat:@"%.2f", product.price];
     return thisCell;
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return 50;
-//}
-
 
 @end
