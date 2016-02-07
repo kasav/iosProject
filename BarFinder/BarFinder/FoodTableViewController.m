@@ -7,10 +7,8 @@
 //
 
 #import "FoodTableViewController.h"
-#import "ProductTableViewCell.h"
 #import <Parse/Parse.h>
 #import "Product.h"
-#import "CustomProductTableViewCell.h"
 
 @interface FoodTableViewController ()
 

@@ -41,8 +41,6 @@
 		E250BA5D1C60050100BFBB66 /* BarDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */; };
 		E265EEF21C661DAC00B8E0F7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E265EEF11C661DAC00B8E0F7 /* MapKit.framework */; };
 		E265EEF41C66842900B8E0F7 /* MapPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265EEF31C66842900B8E0F7 /* MapPositionViewController.swift */; };
-		E2CE28571C67507D003F996A /* CustomProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CE28561C67507D003F996A /* CustomProductTableViewCell.xib */; };
-		E2CE285A1C675146003F996A /* CustomProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CE28591C675146003F996A /* CustomProductTableViewCell.m */; };
 		E2F7A23A1C65218F0080B1F6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7A2391C65218F0080B1F6 /* SearchViewController.m */; };
 		E2FCA5891C637B1E0076E56C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FCA5881C637B1E0076E56C /* LoginViewController.swift */; };
 		E2FCA58B1C637B700076E56C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FCA58A1C637B700076E56C /* RegisterViewController.swift */; };
@@ -96,9 +94,6 @@
 		E250BA5C1C60050100BFBB66 /* BarDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarDetailsViewController.m; path = BarFinder/BarDetailsViewController.m; sourceTree = "<group>"; };
 		E265EEF11C661DAC00B8E0F7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E265EEF31C66842900B8E0F7 /* MapPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPositionViewController.swift; path = BarFinder/MapPositionViewController.swift; sourceTree = "<group>"; };
-		E2CE28561C67507D003F996A /* CustomProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomProductTableViewCell.xib; path = BarFinder/CustomProductTableViewCell.xib; sourceTree = "<group>"; };
-		E2CE28581C675146003F996A /* CustomProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomProductTableViewCell.h; path = BarFinder/CustomProductTableViewCell.h; sourceTree = "<group>"; };
-		E2CE28591C675146003F996A /* CustomProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomProductTableViewCell.m; path = BarFinder/CustomProductTableViewCell.m; sourceTree = "<group>"; };
 		E2F7A2381C65218E0080B1F6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = BarFinder/SearchViewController.h; sourceTree = "<group>"; };
 		E2F7A2391C65218F0080B1F6 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = BarFinder/SearchViewController.m; sourceTree = "<group>"; };
 		E2FCA5881C637B1E0076E56C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = BarFinder/LoginViewController.swift; sourceTree = "<group>"; };
@@ -148,9 +143,6 @@
 				E20A579E1C62281A00D1A094 /* CustomBarTableViewCell.h */,
 				E20A579F1C62281A00D1A094 /* CustomBarTableViewCell.m */,
 				E20A57A01C62281A00D1A094 /* CustomBarTableViewCell.xib */,
-				E2CE28561C67507D003F996A /* CustomProductTableViewCell.xib */,
-				E2CE28581C675146003F996A /* CustomProductTableViewCell.h */,
-				E2CE28591C675146003F996A /* CustomProductTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -316,7 +308,6 @@
 			files = (
 				E250BA491C5F863C00BFBB66 /* LaunchScreen.storyboard in Resources */,
 				E20A57A21C62281A00D1A094 /* CustomBarTableViewCell.xib in Resources */,
-				E2CE28571C67507D003F996A /* CustomProductTableViewCell.xib in Resources */,
 				E250BA461C5F863C00BFBB66 /* Assets.xcassets in Resources */,
 				E250BA441C5F863C00BFBB66 /* Main.storyboard in Resources */,
 			);
@@ -330,7 +321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E265EEF41C66842900B8E0F7 /* MapPositionViewController.swift in Sources */,
-				E2CE285A1C675146003F996A /* CustomProductTableViewCell.m in Sources */,
 				E2FCA5891C637B1E0076E56C /* LoginViewController.swift in Sources */,
 				E2F7A23A1C65218F0080B1F6 /* SearchViewController.m in Sources */,
 				E20A57931C61294E00D1A094 /* LocalData.m in Sources */,

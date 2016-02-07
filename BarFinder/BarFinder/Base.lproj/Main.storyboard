@@ -280,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21N-xq-3wC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096" y="1030"/>
+            <point key="canvasLocation" x="1096" y="1042"/>
         </scene>
         <!--Bar List Table View Controller-->
         <scene sceneID="6hf-ip-hKA">
@@ -418,6 +418,12 @@
                                     <segue destination="yyx-5i-OEo" kind="show" identifier="detailsToFoodSegue" id="GpS-HL-1KT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Име:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rke-ss-x5k">
+                                <rect key="frame" x="219" y="40" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.91284054489999999" green="0.87399656459999997" blue="0.90230329279999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehc-CG-bre">
                                 <rect key="frame" x="206" y="273" width="368" height="49"/>
                                 <color key="backgroundColor" red="0.71288060900000005" green="0.67843411499999995" blue="0.40779829950000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -426,15 +432,9 @@
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JBf-sl-hYy" kind="show" identifier="detailsToDrinksSegue" id="qJ0-GG-q76"/>
+                                    <segue destination="yyx-5i-OEo" kind="show" identifier="detailsToDrinksSegue" id="uaQ-ut-nWk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Име:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rke-ss-x5k">
-                                <rect key="frame" x="219" y="40" width="355" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.91284054489999999" green="0.87399656459999997" blue="0.90230329279999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -513,22 +513,6 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="hys-0e-MGs">
-                                <rect key="frame" x="20" y="134" width="560" height="137"/>
-                                <color key="backgroundColor" red="0.64132612179487181" green="0.62599327002391514" blue="0.42840104339374546" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="137" id="Knl-vr-uNn"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="476210444.76690501">
-                                    <!--2016-02-03 16:40:44 +0000-->
-                                </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
-                                    <!--1970-01-01 11:00:00 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
-                                    <!--2037-12-31 11:00:00 +0000-->
-                                </date>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не е избрана дата" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-1I-yDO">
                                 <rect key="frame" x="20" y="310" width="399" height="26"/>
                                 <constraints>
@@ -538,6 +522,20 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jO0-Uu-127">
+                                <rect key="frame" x="433" y="279" width="147" height="60"/>
+                                <color key="backgroundColor" red="0.7128806089743589" green="0.67843411504074302" blue="0.40779829953141267" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="EAa-PM-QUF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Избери дата">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="datePickedButton:" destination="IRd-vG-Qgf" eventType="touchUpInside" id="xSX-ZB-4qA"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdD-A9-Ncx">
                                 <rect key="frame" x="20" y="64" width="560" height="21"/>
                                 <constraints>
@@ -562,6 +560,20 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrb-zd-9nm">
+                                <rect key="frame" x="20" y="426" width="560" height="67"/>
+                                <color key="backgroundColor" red="0.7128806089743589" green="0.67843411504074302" blue="0.40779829953141267" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="Hgc-nz-hTu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Логин или регистрация">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hWq-qP-SwH" kind="show" id="DuZ-WH-l8A"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="addressLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kS-Iw-MEp">
                                 <rect key="frame" x="20" y="86" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -583,34 +595,6 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jO0-Uu-127">
-                                <rect key="frame" x="433" y="279" width="147" height="60"/>
-                                <color key="backgroundColor" red="0.7128806089743589" green="0.67843411504074302" blue="0.40779829953141267" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="147" id="EAa-PM-QUF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Избери дата">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="datePickedButton:" destination="IRd-vG-Qgf" eventType="touchUpInside" id="xSX-ZB-4qA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrb-zd-9nm">
-                                <rect key="frame" x="20" y="426" width="560" height="67"/>
-                                <color key="backgroundColor" red="0.7128806089743589" green="0.67843411504074302" blue="0.40779829953141267" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="Hgc-nz-hTu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Логин или регистрация">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hWq-qP-SwH" kind="show" id="DuZ-WH-l8A"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoY-0o-JyN">
                                 <rect key="frame" x="20" y="507" width="560" height="67"/>
                                 <color key="backgroundColor" red="0.7128806089743589" green="0.67843411504074302" blue="0.40779829953141267" alpha="1" colorSpace="calibratedRGB"/>
@@ -626,6 +610,22 @@
                                     <action selector="reserveConfirmTapped:" destination="IRd-vG-Qgf" eventType="touchUpInside" id="1RR-Eu-bmK"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="hys-0e-MGs">
+                                <rect key="frame" x="20" y="134" width="560" height="137"/>
+                                <color key="backgroundColor" red="0.64132612179487181" green="0.62599327002391514" blue="0.42840104339374546" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="Knl-vr-uNn"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="476210444.76690501">
+                                    <!--2016-02-03 16:40:44 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -706,49 +706,22 @@
             <point key="canvasLocation" x="439" y="297"/>
         </scene>
         <!--Food Table View Controller-->
-        <scene sceneID="9dH-Kr-jmv">
-            <objects>
-                <tableViewController id="JBf-sl-hYy" customClass="FoodTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vzA-3B-4U5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DrinkCell" id="abG-d9-5Mq">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abG-d9-5Mq" id="nJv-L2-g0R">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="JBf-sl-hYy" id="R5Q-eB-cxq"/>
-                            <outlet property="delegate" destination="JBf-sl-hYy" id="f4k-pP-wFa"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="skc-mH-uG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1827" y="1012"/>
-        </scene>
-        <!--Food Table View Controller-->
         <scene sceneID="7Y5-nI-mGF">
             <objects>
                 <tableViewController id="yyx-5i-OEo" customClass="FoodTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iIH-Ry-K2f">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" id="iIH-Ry-K2f">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodCell" id="Iin-36-Zcy">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodCell" rowHeight="54" id="Iin-36-Zcy">
+                                <rect key="frame" x="0.0" y="28" width="600" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iin-36-Zcy" id="e6e-NQ-BVR">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -759,7 +732,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gzg-nD-C4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2483" y="1072"/>
+            <point key="canvasLocation" x="2483" y="1036"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="D0o-lp-8se">
@@ -1063,13 +1036,14 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3846" y="1036"/>
+            <point key="canvasLocation" x="3837" y="1036"/>
         </scene>
     </scenes>
     <resources>
         <image name="mainLogo" width="520" height="220"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="GpS-HL-1KT"/>
         <segue reference="DuZ-WH-l8A"/>
         <segue reference="UV9-0s-000"/>
         <segue reference="p6H-fZ-0QY"/>
