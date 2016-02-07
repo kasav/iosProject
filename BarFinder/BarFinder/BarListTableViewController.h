@@ -7,11 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Bar.h"
-#import "AppDelegate.h"
-#import "CustomBarTableViewCell.h"
-#import "BarDetailsViewController.h"
-#import "ReservationViewController.h"
+
 
 
 @interface BarListTableViewController : UITableViewController

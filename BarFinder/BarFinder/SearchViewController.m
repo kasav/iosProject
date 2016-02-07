@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewController.h"
+#import "BarListTableViewController.h"
 
 @interface SearchViewController ()
 

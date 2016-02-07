@@ -7,6 +7,8 @@
 //
 
 #import "ReservationViewController.h"
+#import <Parse/Parse.h>
+#import "Reservation.h"
 
 @interface ReservationViewController ()
 

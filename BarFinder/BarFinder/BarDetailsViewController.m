@@ -7,6 +7,8 @@
 //
 
 #import "BarDetailsViewController.h"
+#import "ReservationViewController.h"
+#import "FoodTableViewController.h"
 
 @interface BarDetailsViewController ()
 
@@ -46,8 +48,16 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString: @"goToReserveSegue"]) {
-        ReservationViewController* vc = [segue destinationViewController];
-        vc.reserveBar = self.bar;
+        ReservationViewController* reservationViewController = [segue destinationViewController];
+        reservationViewController.reserveBar = self.bar;
+    }
+    if ([segue.identifier isEqualToString: @"detailsToFoodSegue"]) {
+        FoodTableViewController* foodTableViewController = [segue destinationViewController];
+        foodTableViewController.option = @"Foods";
+    }
+    if ([segue.identifier isEqualToString: @"detailsToDrinksSegue"]) {
+        FoodTableViewController* foodTableViewController = [segue destinationViewController];
+        foodTableViewController.option = @"Drinks";
     }
 }
 /*

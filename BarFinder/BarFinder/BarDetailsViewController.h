@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Bar.h"
-#import "ReservationViewController.h"
+
 
 @interface BarDetailsViewController : UIViewController
 
