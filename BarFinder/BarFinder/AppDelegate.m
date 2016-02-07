@@ -28,7 +28,13 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error) {
             for (Bar* b in objects){
-                [self.data addBar:b];
+               
+                if ([self stringLengthIsValid:b.name] &&
+                    [self stringLengthIsValid:b.address] &&
+                    [self stringLengthIsValidForPhone:b.phone]) {
+                    
+                    [self.data addBar:b];
+                }
             }
         }
         
@@ -40,7 +46,21 @@
     
     return YES;
 }
+                    
+-(BOOL) stringLengthIsValid:(NSString*) str {
+    if (str.length > 0 ) {
+        return YES;
+    }
+    return NO;
+}
 
+-(BOOL) stringLengthIsValidForPhone:(NSString*) str {
+    if (str.length > 6 ) {
+        return YES;
+    }
+    return NO;
+}
+                    
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

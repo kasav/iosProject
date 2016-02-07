@@ -27,12 +27,16 @@
     PFQuery* query = [PFQuery queryWithClassName: self.option];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error) {
+            
             for (PFObject* product in objects){
+                
                 NSString * name = [product objectForKey:@"name"];
                 CGFloat price = [[product objectForKey:@"price"] floatValue];
-                id item = [[Product alloc] initWithName:name andPrice:price];
-                [self.products addObject:item];
-
+                
+                if ([self stringLengthIsValid:name]) {
+                    id item = [[Product alloc] initWithName:name andPrice:price];
+                    [self.products addObject:item];
+                }
             }
             [self.tableView reloadData];
         }
@@ -71,5 +75,13 @@
     thisCell.textLabel.text = product.name;
     return thisCell;
 }
+
+-(BOOL) stringLengthIsValid:(NSString*) str {
+    if (str.length > 0 ) {
+        return YES;
+    }
+    return NO;
+}
+
 
 @end
