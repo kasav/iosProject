@@ -11,7 +11,7 @@
 
 @interface LocalData : NSObject
 
--(NSMutableArray*) bars;
+-(NSMutableArray*) pullBarsFromData;
 
 -(void) addBar: (Bar*) bar;
 

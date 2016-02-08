@@ -26,7 +26,7 @@
     self.navigationItem.title = @"Заведения";
     
     AppDelegate* delegate = [UIApplication sharedApplication].delegate;
-    self.bars = [delegate.data bars];
+    self.bars = [delegate.data pullBarsFromData];
  
     if (self.wordToCheck) {
         NSString* filter = @"%K CONTAINS[c] %@";

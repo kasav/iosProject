@@ -10,7 +10,7 @@
 
 @interface LocalData()
 
-@property NSMutableArray* _bars;
+@property NSMutableArray* bars;
 
 @end
 @implementation LocalData
@@ -18,17 +18,17 @@
 -(instancetype) init {
     self = [super init];
     if (self) {
-        self._bars = [NSMutableArray array];
+        self.bars = [NSMutableArray array];
     }
     
     return self;
 }
 
--(NSMutableArray*) bars{
-    return [NSMutableArray arrayWithArray:self._bars];
+-(NSMutableArray*) pullBarsFromData{
+    return [NSMutableArray arrayWithArray:self.bars];
 }
 
 -(void) addBar: (Bar*) bar{
-    [self._bars addObject: bar];
+    [self.bars addObject: bar];
 }
 @end
